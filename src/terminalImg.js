@@ -15,17 +15,17 @@ const draw = async function (file, { width, height }) {
     width = process.stdout.columns || 80;
   }
 
-  const png = await Jimp.read(file);
+  const image = await Jimp.read(file);
 
   const requestedWidth = width || Jimp.AUTO;
   const requestedHeight = height || Jimp.AUTO;
 
-  const resizedLogo = png.resize(requestedWidth, requestedHeight, Jimp.RESIZE_NEAREST_NEIGHBOR);
+  const resizedImage = image.resize(requestedWidth, requestedHeight, Jimp.RESIZE_NEAREST_NEIGHBOR);
 
-  for (let y = 0; y < resizedLogo.bitmap.height; y += 2) {
-    for (let x = 0; x < resizedLogo.bitmap.width; x++) {
-      const upperColor = resizedLogo.getPixelColor(x, y);
-      const lowerColor = resizedLogo.getPixelColor(x, y + 1);
+  for (let y = 0; y < resizedImage.bitmap.height; y += 2) {
+    for (let x = 0; x < resizedImage.bitmap.width; x++) {
+      const upperColor = resizedImage.getPixelColor(x, y);
+      const lowerColor = resizedImage.getPixelColor(x, y + 1);
 
       if (upperColor === lowerColor) {
         process.stdout.write(chalk.bgHex(upperColor).hex(upperColor)(characterFullBlock));
