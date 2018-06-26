@@ -1,0 +1,31 @@
+{
+  "name": "terminal-img",
+  "version": "0.0.0",
+  "description": "terminal-img renders an image to the terminal.",
+  "contributors": [
+    {
+      "name": "Golo Roden",
+      "email": "golo.roden@thenativeweb.io"
+    }
+  ],
+  "main": "dist/terminalImg.js",
+  "dependencies": {
+    "chalk": "2.4.1",
+    "jimp": "0.2.28",
+    "regenerator-runtime": "0.12.0"
+  },
+  "devDependencies": {
+    "assertthat": "1.0.0",
+    "roboter": "1.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thenativeweb/terminal-img.git"
+  },
+  "keywords": [
+    "cli",
+    "png",
+    "terminal"
+  ],
+  "license": "MIT"
+}
