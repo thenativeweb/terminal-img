@@ -10,7 +10,7 @@ $ npm install terminal-img
 
 ## Quick start
 
-First you need to integrate terminal-img into your application.
+First you need to integrate terminal-img into your application:
 
 ```javascript
 const draw = require('terminal-img');
@@ -43,6 +43,8 @@ $ npx roboter
 ```
 
 ## License
+
+This module was inspired by the [terminal-image](https://www.npmjs.com/package/terminal-image) module, and uses a few ideas of the code of that module.
 
 The MIT License (MIT)
 Copyright (c) 2018 the native web.
