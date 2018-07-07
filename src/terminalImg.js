@@ -6,7 +6,7 @@ const chalk = require('chalk'),
 const characterFullBlock = '\u2588',
       characterLowerHalfBlock = '\u2584';
 
-const draw = async function (file, { width, height }) {
+const drawAsString = async function (file, { width, height }) {
   if (!file) {
     throw new Error('File is missing.');
   }
@@ -22,20 +22,30 @@ const draw = async function (file, { width, height }) {
 
   const resizedImage = image.resize(requestedWidth, requestedHeight, Jimp.RESIZE_NEAREST_NEIGHBOR);
 
+  let result = '';
+
   for (let y = 0; y < resizedImage.bitmap.height; y += 2) {
     for (let x = 0; x < resizedImage.bitmap.width; x++) {
       const upperColor = resizedImage.getPixelColor(x, y);
       const lowerColor = resizedImage.getPixelColor(x, y + 1);
 
       if (upperColor === lowerColor) {
-        process.stdout.write(chalk.bgHex(upperColor).hex(upperColor)(characterFullBlock));
+        result += chalk.bgHex(upperColor).hex(upperColor)(characterFullBlock);
         continue;
       }
 
-      process.stdout.write(chalk.bgHex(upperColor).hex(lowerColor)(characterLowerHalfBlock));
+      result += chalk.bgHex(upperColor).hex(lowerColor)(characterLowerHalfBlock);
     }
-    process.stdout.write('\n');
+    result += '\n';
   }
+
+  return result;
 };
+
+const draw = async function (file, { width, height }) {
+  process.stdout.write(await drawAsString(file, { width, height }));
+};
+
+draw.asString = drawAsString;
 
 module.exports = draw;

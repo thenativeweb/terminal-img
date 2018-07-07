@@ -34,6 +34,16 @@ await draw('logo.png', { width: 80, height: 25 });
 
 If you specify only one of `width` and `height`, the other value is calculated automatically in a way that preserves the image's aspect ratio. If you provide both of them, the image may become deformed.
 
+### Stringifying the image
+
+From time to time, you may want to get the image as a string, instead of having it drawn immediately. For that, use the `draw.asString` function:
+
+```javascript
+const image = await draw.asString('logo.png');
+```
+
+All the options that work for `draw` work for `draw.asString` in the very same way.
+
 ## Running the build
 
 To build this module use [roboter](https://www.npmjs.com/package/roboter).
