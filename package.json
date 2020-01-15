@@ -8,15 +8,16 @@
       "email": "golo.roden@thenativeweb.io"
     }
   ],
-  "main": "dist/terminalImg.js",
+  "main": "build/lib/index.js",
+  "types": "build/lib/index.d.ts",
   "dependencies": {
-    "@babel/runtime": "7.3.1",
-    "chalk": "2.4.2",
-    "jimp": "0.6.0"
+    "chalk": "3.0.0",
+    "jimp": "0.9.3"
   },
   "devDependencies": {
-    "assertthat": "2.0.1",
-    "roboter": "3.0.4"
+    "assertthat": "5.1.0",
+    "roboter": "10.1.22",
+    "semantic-release-configuration": "1.0.9"
   },
   "repository": {
     "type": "git",
