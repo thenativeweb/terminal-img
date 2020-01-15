@@ -2,6 +2,17 @@
 
 terminal-img renders an image to the terminal.
 
+## Status
+
+| Category         | Status                                                                                                                                           |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Version          | [![npm](https://img.shields.io/npm/v/terminal-img)](https://www.npmjs.com/package/terminal-img)                                                      |
+| Dependencies     | ![David](https://img.shields.io/david/thenativeweb/terminal-img)                                                                                   |
+| Dev dependencies | ![David](https://img.shields.io/david/dev/thenativeweb/terminal-img)                                                                               |
+| Build            | ![GitHub Actions](https://github.com/thenativeweb/terminal-img/workflows/Release/badge.svg?branch=master) |
+| License          | ![GitHub](https://img.shields.io/github/license/thenativeweb/terminal-img)                                                                         |
+
+
 ## Installation
 
 ```shell
@@ -13,7 +24,13 @@ $ npm install terminal-img
 First you need to integrate terminal-img into your application:
 
 ```javascript
-const draw = require('terminal-img');
+const { draw, drawAsString } = require('terminal-img');
+```
+
+If you use TypeScript, use the following code instead:
+
+```typescript
+import { draw, drawAsString } from 'terminal-img';
 ```
 
 Then you can call the `draw` function with an image file as parameter to draw the image to the terminal. The file can be given either as a path or a url. The module supports the image formats `.png` and `.jpg`:
@@ -36,13 +53,21 @@ If you specify only one of `width` and `height`, the other value is calculated a
 
 ### Stringifying the image
 
-From time to time, you may want to get the image as a string, instead of having it drawn immediately. For that, use the `draw.asString` function:
+From time to time, you may want to get the image as a string, instead of having it drawn immediately. For that, use the `drawAsString` function:
 
 ```javascript
-const image = await draw.asString('logo.png');
+const image = await drawAsString('logo.png');
 ```
 
-All the options that work for `draw` work for `draw.asString` in the very same way.
+All the options that work for `draw` work for `drawAsString` in the very same way.
+
+### Running the sample application
+
+To run the sample application, use the following command:
+
+```shell
+$ npx ts-node samples/app.ts
+```
 
 ## Running the build
 
@@ -51,16 +76,3 @@ To build this module use [roboter](https://www.npmjs.com/package/roboter).
 ```shell
 $ npx roboter
 ```
-
-## License
-
-This module was inspired by the [terminal-image](https://www.npmjs.com/package/terminal-image) module, and uses a few ideas of the code of that module.
-
-The MIT License (MIT)
-Copyright (c) 2018 the native web.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
