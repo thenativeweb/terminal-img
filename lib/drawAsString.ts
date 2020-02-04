@@ -3,21 +3,22 @@ import { DrawOptions } from './DrawOptions';
 import Jimp from 'jimp';
 
 const characterFullBlock = '\u2588',
-      characterLowerHalfBlock = '\u2584';
+  characterLowerHalfBlock = '\u2584';
 
-const drawAsString = async function (fileName: string, options: DrawOptions = {}): Promise<string> {
-  if (!options.width && !options.height) {
-    /* eslint-disable no-param-reassign */
-    options.width = process.stdout.columns || 80;
-    /* eslint-enable no-param-reassign */
-  }
-
+const drawAsString = async function(
+  fileName: string,
+  options: DrawOptions = {}
+): Promise<string> {
   const image = await Jimp.read(fileName);
 
-  const requestedWidth = options.width ?? Jimp.AUTO;
+  const requestedWidth = options.width ?? process.stdout.columns;
   const requestedHeight = options.height ?? Jimp.AUTO;
 
-  const resizedImage = image.resize(requestedWidth, requestedHeight, Jimp.RESIZE_NEAREST_NEIGHBOR);
+  const resizedImage = image.resize(
+    requestedWidth,
+    requestedHeight,
+    Jimp.RESIZE_NEAREST_NEIGHBOR
+  );
 
   let result = '';
 
@@ -30,27 +31,23 @@ const drawAsString = async function (fileName: string, options: DrawOptions = {}
       const lowerColorAsRGBA = Jimp.intToRGBA(lowerColor);
 
       if (upperColor === lowerColor) {
-        result += chalk.bgRgb(
-          upperColorAsRGBA.r,
-          upperColorAsRGBA.g,
-          upperColorAsRGBA.b
-        ).rgb(
-          upperColorAsRGBA.r,
-          upperColorAsRGBA.g,
-          upperColorAsRGBA.b
-        )(characterFullBlock);
+        result += chalk
+          .bgRgb(upperColorAsRGBA.r, upperColorAsRGBA.g, upperColorAsRGBA.b)
+          .rgb(
+            upperColorAsRGBA.r,
+            upperColorAsRGBA.g,
+            upperColorAsRGBA.b
+          )(characterFullBlock);
         continue;
       }
 
-      result += chalk.bgRgb(
-        upperColorAsRGBA.r,
-        upperColorAsRGBA.g,
-        upperColorAsRGBA.b
-      ).rgb(
-        lowerColorAsRGBA.r,
-        lowerColorAsRGBA.g,
-        lowerColorAsRGBA.b
-      )(characterLowerHalfBlock);
+      result += chalk
+        .bgRgb(upperColorAsRGBA.r, upperColorAsRGBA.g, upperColorAsRGBA.b)
+        .rgb(
+          lowerColorAsRGBA.r,
+          lowerColorAsRGBA.g,
+          lowerColorAsRGBA.b
+        )(characterLowerHalfBlock);
     }
     result += '\n';
   }
