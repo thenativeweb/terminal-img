@@ -6,6 +6,10 @@
     {
       "name": "Golo Roden",
       "email": "golo.roden@thenativeweb.io"
+    },
+    {
+      "name": "Dimitri Reifschneider",
+      "email": "dimitri.reifschneider@gmail.com"
     }
   ],
   "main": "build/lib/index.js",
