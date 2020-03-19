@@ -3,9 +3,9 @@ import { DrawOptions } from './DrawOptions';
 import Jimp from 'jimp';
 
 const characterFullBlock = '\u2588',
-  characterLowerHalfBlock = '\u2584';
+      characterLowerHalfBlock = '\u2584';
 
-const drawAsString = async function(
+const drawAsString = async function (
   fileName: string,
   options: DrawOptions = {}
 ): Promise<string> {
@@ -31,23 +31,19 @@ const drawAsString = async function(
       const lowerColorAsRGBA = Jimp.intToRGBA(lowerColor);
 
       if (upperColor === lowerColor) {
-        result += chalk
-          .bgRgb(upperColorAsRGBA.r, upperColorAsRGBA.g, upperColorAsRGBA.b)
-          .rgb(
-            upperColorAsRGBA.r,
-            upperColorAsRGBA.g,
-            upperColorAsRGBA.b
-          )(characterFullBlock);
+        result += chalk.bgRgb(upperColorAsRGBA.r, upperColorAsRGBA.g, upperColorAsRGBA.b).rgb(
+          upperColorAsRGBA.r,
+          upperColorAsRGBA.g,
+          upperColorAsRGBA.b
+        )(characterFullBlock);
         continue;
       }
 
-      result += chalk
-        .bgRgb(upperColorAsRGBA.r, upperColorAsRGBA.g, upperColorAsRGBA.b)
-        .rgb(
-          lowerColorAsRGBA.r,
-          lowerColorAsRGBA.g,
-          lowerColorAsRGBA.b
-        )(characterLowerHalfBlock);
+      result += chalk.bgRgb(upperColorAsRGBA.r, upperColorAsRGBA.g, upperColorAsRGBA.b).rgb(
+        lowerColorAsRGBA.r,
+        lowerColorAsRGBA.g,
+        lowerColorAsRGBA.b
+      )(characterLowerHalfBlock);
     }
     result += '\n';
   }
