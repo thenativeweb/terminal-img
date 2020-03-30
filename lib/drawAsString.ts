@@ -6,16 +6,17 @@ const characterFullBlock = '\u2588',
       characterLowerHalfBlock = '\u2584';
 
 const drawAsString = async function (fileName: string, options: DrawOptions = {}): Promise<string> {
-  if (!options.width && !options.height) {
-    /* eslint-disable no-param-reassign */
-    options.width = process.stdout.columns || 80;
-    /* eslint-enable no-param-reassign */
+  let requestedWidth = options.width;
+  let requestedHeight = options.height;
+
+  if (!requestedWidth && !requestedHeight) {
+    requestedWidth = process.stdout.columns || 80;
   }
 
-  const image = await Jimp.read(fileName);
+  requestedWidth = requestedWidth ?? Jimp.AUTO;
+  requestedHeight = requestedHeight ?? Jimp.AUTO;
 
-  const requestedWidth = options.width ?? Jimp.AUTO;
-  const requestedHeight = options.height ?? Jimp.AUTO;
+  const image = await Jimp.read(fileName);
 
   const resizedImage = image.resize(requestedWidth, requestedHeight, Jimp.RESIZE_NEAREST_NEIGHBOR);
 
