@@ -12,7 +12,7 @@
   "types": "build/lib/index.d.ts",
   "dependencies": {
     "chalk": "4.0.0",
-    "jimp": "0.10.1"
+    "jimp": "0.10.2"
   },
   "devDependencies": {
     "assertthat": "5.1.1",
