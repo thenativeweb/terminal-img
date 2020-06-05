@@ -1,3 +1,10 @@
+## [2.0.12](https://github.com/thenativeweb/terminal-img/compare/2.0.11...2.0.12) (2020-06-05)
+
+
+### Bug Fixes
+
+* bump jimp from 0.12.1 to 0.13.0 ([#89](https://github.com/thenativeweb/terminal-img/issues/89)) ([912bcb5](https://github.com/thenativeweb/terminal-img/commit/912bcb598feacb964ebf6c7b2d95fd91bc3b1252))
+
 ## [2.0.11](https://github.com/thenativeweb/terminal-img/compare/2.0.10...2.0.11) (2020-05-21)
 
 
