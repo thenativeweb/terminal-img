@@ -27,30 +27,30 @@ const drawAsString = async function (fileName: string, options: DrawOptions = {}
       const upperColor = resizedImage.getPixelColor(x, y);
       const lowerColor = resizedImage.getPixelColor(x, y + 1);
 
-      const upperColorAsRGBA = Jimp.intToRGBA(upperColor);
-      const lowerColorAsRGBA = Jimp.intToRGBA(lowerColor);
+      const upperColorAsRgba = Jimp.intToRGBA(upperColor);
+      const lowerColorAsRgba = Jimp.intToRGBA(lowerColor);
 
       if (upperColor === lowerColor) {
         result += chalk.bgRgb(
-          upperColorAsRGBA.r,
-          upperColorAsRGBA.g,
-          upperColorAsRGBA.b
+          upperColorAsRgba.r,
+          upperColorAsRgba.g,
+          upperColorAsRgba.b
         ).rgb(
-          upperColorAsRGBA.r,
-          upperColorAsRGBA.g,
-          upperColorAsRGBA.b
+          upperColorAsRgba.r,
+          upperColorAsRgba.g,
+          upperColorAsRgba.b
         )(characterFullBlock);
         continue;
       }
 
       result += chalk.bgRgb(
-        upperColorAsRGBA.r,
-        upperColorAsRGBA.g,
-        upperColorAsRGBA.b
+        upperColorAsRgba.r,
+        upperColorAsRgba.g,
+        upperColorAsRgba.b
       ).rgb(
-        lowerColorAsRGBA.r,
-        lowerColorAsRGBA.g,
-        lowerColorAsRGBA.b
+        lowerColorAsRgba.r,
+        lowerColorAsRgba.g,
+        lowerColorAsRgba.b
       )(characterLowerHalfBlock);
     }
     result += '\n';
