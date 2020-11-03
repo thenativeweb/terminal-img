@@ -1,3 +1,10 @@
+## [2.0.17](https://github.com/thenativeweb/terminal-img/compare/2.0.16...2.0.17) (2020-11-03)
+
+
+### Bug Fixes
+
+* Fix headline for robot section in readme. ([#144](https://github.com/thenativeweb/terminal-img/issues/144)) ([3ad1f91](https://github.com/thenativeweb/terminal-img/commit/3ad1f914df138259cbe342c2e635b0f1a5eeb897))
+
 ## [2.0.16](https://github.com/thenativeweb/terminal-img/compare/2.0.15...2.0.16) (2020-08-29)
 
 
