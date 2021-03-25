@@ -1,3 +1,10 @@
+## [2.0.18](https://github.com/thenativeweb/terminal-img/compare/2.0.17...2.0.18) (2021-03-25)
+
+
+### Bug Fixes
+
+* Migrate from master to main. ([#221](https://github.com/thenativeweb/terminal-img/issues/221)) ([60aec40](https://github.com/thenativeweb/terminal-img/commit/60aec401bda9568325c4996751f8b888e0686412))
+
 ## [2.0.17](https://github.com/thenativeweb/terminal-img/compare/2.0.16...2.0.17) (2020-11-03)
 
 
