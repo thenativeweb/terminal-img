@@ -9,7 +9,7 @@ terminal-img renders an image to the terminal.
 | Version          | [![npm](https://img.shields.io/npm/v/terminal-img)](https://www.npmjs.com/package/terminal-img)                                                      |
 | Dependencies     | ![David](https://img.shields.io/david/thenativeweb/terminal-img)                                                                                   |
 | Dev dependencies | ![David](https://img.shields.io/david/dev/thenativeweb/terminal-img)                                                                               |
-| Build            | ![GitHub Actions](https://github.com/thenativeweb/terminal-img/workflows/Release/badge.svg?branch=master) |
+| Build            | ![GitHub Actions](https://github.com/thenativeweb/terminal-img/workflows/Release/badge.svg?branch=main) |
 | License          | ![GitHub](https://img.shields.io/github/license/thenativeweb/terminal-img)                                                                         |
 
 
