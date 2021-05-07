@@ -1,3 +1,10 @@
+## [2.0.20](https://github.com/thenativeweb/terminal-img/compare/2.0.19...2.0.20) (2021-05-07)
+
+
+### Bug Fixes
+
+* bump lodash from 4.17.20 to 4.17.21 ([#234](https://github.com/thenativeweb/terminal-img/issues/234)) ([6d42226](https://github.com/thenativeweb/terminal-img/commit/6d42226b9cac83021dfe39d2110e2a984f28a33b))
+
 ## [2.0.19](https://github.com/thenativeweb/terminal-img/compare/2.0.18...2.0.19) (2021-04-23)
 
 
