@@ -1,3 +1,10 @@
+## [2.0.21](https://github.com/thenativeweb/terminal-img/compare/2.0.20...2.0.21) (2021-05-10)
+
+
+### Bug Fixes
+
+* bump hosted-git-info from 2.8.8 to 2.8.9 ([#235](https://github.com/thenativeweb/terminal-img/issues/235)) ([4707588](https://github.com/thenativeweb/terminal-img/commit/470758854f4e4a7bb9445f6b65baa5edb98e4d0f))
+
 ## [2.0.20](https://github.com/thenativeweb/terminal-img/compare/2.0.19...2.0.20) (2021-05-07)
 
 
