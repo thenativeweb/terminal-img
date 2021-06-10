@@ -1,3 +1,17 @@
+## [2.0.23](https://github.com/thenativeweb/terminal-img/compare/2.0.22...2.0.23) (2021-06-10)
+
+
+### Bug Fixes
+
+* bump normalize-url from 6.0.0 to 6.0.1 ([#242](https://github.com/thenativeweb/terminal-img/issues/242)) ([477a969](https://github.com/thenativeweb/terminal-img/commit/477a969da79a49ec175dfcc80f8954353753068d))
+
+## [2.0.22](https://github.com/thenativeweb/terminal-img/compare/2.0.21...2.0.22) (2021-06-10)
+
+
+### Bug Fixes
+
+* bump trim-newlines from 3.0.0 to 3.0.1 ([#243](https://github.com/thenativeweb/terminal-img/issues/243)) ([6ea43ee](https://github.com/thenativeweb/terminal-img/commit/6ea43ee1a7913201137d9163d8e6cab1b7f9e7d3))
+
 ## [2.0.21](https://github.com/thenativeweb/terminal-img/compare/2.0.20...2.0.21) (2021-05-10)
 
 
