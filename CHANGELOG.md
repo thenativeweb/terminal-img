@@ -1,3 +1,10 @@
+## [2.0.24](https://github.com/thenativeweb/terminal-img/compare/2.0.23...2.0.24) (2021-06-10)
+
+
+### Bug Fixes
+
+* bump glob-parent from 5.1.1 to 5.1.2 ([#241](https://github.com/thenativeweb/terminal-img/issues/241)) ([eb58c53](https://github.com/thenativeweb/terminal-img/commit/eb58c5351a359defe47bad8c5eeee28d58ecd3d8))
+
 ## [2.0.23](https://github.com/thenativeweb/terminal-img/compare/2.0.22...2.0.23) (2021-06-10)
 
 
