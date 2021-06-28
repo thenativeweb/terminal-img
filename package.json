@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "roboter": "11.7.6",
-    "semantic-release-configuration": "2.0.1"
+    "semantic-release-configuration": "2.0.4"
   },
   "repository": {
     "type": "git",
