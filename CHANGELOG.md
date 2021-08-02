@@ -1,3 +1,10 @@
+## [2.0.25](https://github.com/thenativeweb/terminal-img/compare/2.0.24...2.0.25) (2021-08-02)
+
+
+### Bug Fixes
+
+* bump chalk from 4.1.1 to 4.1.2 ([#249](https://github.com/thenativeweb/terminal-img/issues/249)) ([d2af1da](https://github.com/thenativeweb/terminal-img/commit/d2af1da84f0f56c6e57f2e522f4fbcac25a14782))
+
 ## [2.0.24](https://github.com/thenativeweb/terminal-img/compare/2.0.23...2.0.24) (2021-06-10)
 
 
