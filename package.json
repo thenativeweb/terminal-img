@@ -8,6 +8,7 @@
       "email": "golo.roden@thenativeweb.io"
     }
   ],
+  "private": false,
   "main": "build/lib/index.js",
   "types": "build/lib/index.d.ts",
   "dependencies": {
@@ -18,6 +19,7 @@
     "roboter": "12.1.2",
     "semantic-release-configuration": "2.0.5"
   },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/thenativeweb/terminal-img.git"
