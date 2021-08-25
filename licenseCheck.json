@@ -12,5 +12,13 @@
     "MIT",
     "Python-2.0",
     "Unlicense"
-  ]
+  ],
+  "knownPackageLicenses": {
+    "exif-parser": {
+      "~0.1.12": "MIT"
+    },
+    "process": {
+      "~0.5.2": "MIT"
+    }
+  }
 }
