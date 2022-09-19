@@ -13,7 +13,7 @@
   "types": "build/lib/index.d.ts",
   "dependencies": {
     "chalk": "5.0.1",
-    "jimp": "0.16.1"
+    "jimp": "0.16.2"
   },
   "devDependencies": {
     "roboter": "13.2.1",
